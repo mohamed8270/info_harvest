@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:info_harvest/features/product/screens/home_screen.dart';
+import 'package:info_harvest/features/authentication/screens/login_screen.dart';
 import 'package:info_harvest/utils/theme/theme.dart';
 
 class Wrapper extends StatelessWidget {
@@ -11,7 +11,7 @@ class Wrapper extends StatelessWidget {
     return GetMaterialApp(
       title: 'Info Harvest',
       theme: IappTheme.lightTheme,
-      home: const HomeScreen(),
+      home: const LoginScreen(),
     );
   }
 }

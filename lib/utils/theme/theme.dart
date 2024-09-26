@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:info_harvest/utils/constants/colors.dart';
-import 'package:info_harvest/utils/theme/custome_themes/app_bar_theme.dart';
-import 'package:info_harvest/utils/theme/custome_themes/text_theme.dart';
+import 'package:info_harvest/utils/theme/custom_themes/app_bar_theme.dart';
+import 'package:info_harvest/utils/theme/custom_themes/text_theme.dart';
 
 class IappTheme {
   IappTheme._();

@@ -2,9 +2,9 @@ class IappText {
   static const String appname = 'Info Harvest';
 
   static const String onBoardingTitle1 = 'Your Shopping';
-  static const String onBoardingTitle2 = 'Notification\nfor Everything';
+  static const String onBoardingTitle2 = ' Notification\nfor Everything';
   static const String onBoardingSub =
-      'Get timely alerts for your favorite products\nwith our mobile app and without loosing your money!  ';
+      'Get timely alerts for your favorite products with\nour mobile app and without loosing your money!  ';
   static const String onBoardingBtn = 'Continue with Google';
 
   static const String heroTitile = 'Secure your money\nwith precision';

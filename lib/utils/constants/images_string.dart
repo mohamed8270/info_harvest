@@ -2,7 +2,7 @@ class IappImgString {
   IappImgString._();
 
 // images
-  static String onBoardingImg = 'assets/images/product-img-grp.svg';
+  static String onBoardingImg = 'assets/images/product-img-grp.png';
 
 // icons
   static String notify = 'assets/icons/notification.svg';

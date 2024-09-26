@@ -1,3 +1,5 @@
+import 'package:gap/gap.dart';
+
 class IappSizes {
   IappSizes._();
 
@@ -29,4 +31,12 @@ class IappSizes {
   static const double btncorner1 = 5.0;
   static const double btncorner2 = 10.0;
   static const double btncorner3 = 40.0;
+
+// spaces
+  static const Gap spacexs = Gap(5);
+  static const Gap spacesm = Gap(10);
+  static const Gap spacemd = Gap(15);
+  static const Gap spacelg = Gap(20);
+  static const Gap spacexl = Gap(25);
+  static const Gap space2xl = Gap(30);
 }
