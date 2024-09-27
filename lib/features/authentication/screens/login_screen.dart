@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:info_harvest/utils/constants/colors.dart';
 import 'package:info_harvest/utils/constants/images_string.dart';
 import 'package:info_harvest/utils/constants/sizes.dart';
-import 'package:info_harvest/utils/constants/text_string.dart';
+import 'package:info_harvest/utils/constants/text_strings.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
