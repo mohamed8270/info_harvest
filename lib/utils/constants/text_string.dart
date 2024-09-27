@@ -1,5 +1,5 @@
-class IappText {
-  static const String appname = 'Info Harvest';
+class IAppText {
+  static const String appName = 'Info Harvest';
 
   static const String onBoardingTitle1 = 'Your Shopping';
   static const String onBoardingTitle2 = ' Notification\nfor Everything';
@@ -7,7 +7,7 @@ class IappText {
       'Get timely alerts for your favorite products with\nour mobile app and without loosing your money!  ';
   static const String onBoardingBtn = 'Continue with Google';
 
-  static const String heroTitile = 'Secure your money\nwith precision';
+  static const String heroTitle = 'Secure your money\nwith precision';
   static const String heroSub =
       'Join our millions of people who choose Info Harvest\nto save money in every products';
 

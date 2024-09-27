@@ -1,7 +1,7 @@
 import 'package:gap/gap.dart';
 
-class IappSizes {
-  IappSizes._();
+class IAppSizes {
+  IAppSizes._();
 
 // padding size
   static const double xs = 4.0;
@@ -11,32 +11,32 @@ class IappSizes {
   static const double xl = 32.0;
 
 // icons size
-  static const double icnxs = 8.0;
-  static const double icnsm = 10.0;
-  static const double icnmd = 14.0;
-  static const double icnlg = 16.0;
-  static const double icnxl = 18.0;
+  static const double icnXs = 8.0;
+  static const double icnSm = 10.0;
+  static const double icnMd = 14.0;
+  static const double icnLg = 16.0;
+  static const double icnXl = 18.0;
   static const double icn2xl = 20.0;
 
 // font size
-  static const double fontxs = 8.0;
-  static const double fontsm = 12.0;
-  static const double fontmd = 16.0;
-  static const double fontlg = 22.0;
-  static const double fontxl = 32.0;
+  static const double fontXs = 8.0;
+  static const double fontSm = 12.0;
+  static const double fontMd = 16.0;
+  static const double fontLg = 22.0;
+  static const double fontXl = 32.0;
 
 // buttons
-  static const double btnh1 = 40.0;
-  static const double btnh2 = 50.0;
-  static const double btncorner1 = 5.0;
-  static const double btncorner2 = 10.0;
-  static const double btncorner3 = 40.0;
+  static const double btnH1 = 40.0;
+  static const double btnH2 = 50.0;
+  static const double btnCorner1 = 5.0;
+  static const double btnCorner2 = 10.0;
+  static const double btnCorner3 = 40.0;
 
 // spaces
-  static const Gap spacexs = Gap(5);
-  static const Gap spacesm = Gap(10);
-  static const Gap spacemd = Gap(15);
-  static const Gap spacelg = Gap(20);
-  static const Gap spacexl = Gap(25);
+  static const Gap spaceXs = Gap(5);
+  static const Gap spaceSm = Gap(10);
+  static const Gap spaceMd = Gap(15);
+  static const Gap spaceLg = Gap(20);
+  static const Gap spaceXl = Gap(25);
   static const Gap space2xl = Gap(30);
 }

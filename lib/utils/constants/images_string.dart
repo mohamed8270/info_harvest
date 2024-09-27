@@ -1,5 +1,5 @@
-class IappImgString {
-  IappImgString._();
+class IAppImgString {
+  IAppImgString._();
 
 // images
   static String onBoardingImg = 'assets/images/product-img-grp.png';

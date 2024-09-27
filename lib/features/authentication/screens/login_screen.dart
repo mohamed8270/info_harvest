@@ -22,26 +22,27 @@ class LoginScreen extends StatelessWidget {
               blendMode: BlendMode.srcATop,
               child: Image.asset(
                 height: screenSize.height * 0.65,
-                width: screenSize.width,alignment: Alignment.center,
-                IappImgString.onBoardingImg,
-                  fit: BoxFit.fill,scale: 0.5,
+                width: screenSize.width,
+                alignment: Alignment.center,
+                IAppImgString.onBoardingImg,
+                fit: BoxFit.fitWidth,
                 filterQuality: FilterQuality.high,
               ),
             ),
-            IappSizes.spacelg,
+            IAppSizes.spaceLg,
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: IappText.onBoardingTitle1,
+                    text: IAppText.onBoardingTitle1,
                     style: Theme.of(context)
                         .textTheme
                         .headlineMedium
                         ?.copyWith(color: IAppColor.pulpRed),
                   ),
                   TextSpan(
-                    text: IappText.onBoardingTitle2,
+                    text: IAppText.onBoardingTitle2,
                     style: Theme.of(context)
                         .textTheme
                         .headlineMedium
@@ -50,9 +51,9 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
             ),
-            IappSizes.spacemd,
+            IAppSizes.spaceMd,
             Text(
-              IappText.onBoardingSub,
+              IAppText.onBoardingSub,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.labelLarge?.copyWith(
                     color: IAppColor.cementGrey,
@@ -60,7 +61,7 @@ class LoginScreen extends StatelessWidget {
                     height: 1.6,
                   ),
             ),
-            IappSizes.spacemd,
+            IAppSizes.spaceMd,
             GestureDetector(
               onTap: () {},
               child: Container(
@@ -68,7 +69,7 @@ class LoginScreen extends StatelessWidget {
                 width: screenSize.width * 0.9,
                 decoration: BoxDecoration(
                   color: IAppColor.pulpRed,
-                  borderRadius: BorderRadius.circular(IappSizes.btncorner3),
+                  borderRadius: BorderRadius.circular(IAppSizes.btnCorner3),
                 ),
                 alignment: Alignment.center,
                 child: Row(
@@ -76,17 +77,17 @@ class LoginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      IappImgString.google,
-                      height: IappSizes.icn2xl,
-                      width: IappSizes.icn2xl,
+                      IAppImgString.google,
+                      height: IAppSizes.icn2xl,
+                      width: IAppSizes.icn2xl,
                       colorFilter: const ColorFilter.mode(
                         IAppColor.cloudWhite,
                         BlendMode.srcIn,
                       ),
                     ),
-                    IappSizes.spacesm,
+                    IAppSizes.spaceSm,
                     Text(
-                      IappText.onBoardingBtn,
+                      IAppText.onBoardingBtn,
                       style: Theme.of(context).textTheme.labelLarge?.copyWith(
                           color: IAppColor.cloudWhite,
                           fontWeight: FontWeight.w500),
