@@ -13,6 +13,9 @@ class HomeScreen extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(80),
         child: AppBar(
+          backgroundColor: IAppColor.cloudWhite,
+          elevation: 0,
+          automaticallyImplyLeading: false,
           leading: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -52,6 +55,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          IAppSizes.spaceSm,
           Stack(
             children: [
               Text(
