@@ -10,9 +10,9 @@ class IappTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.light,
-    primaryColor: IappColor.pulpred,
-    scaffoldBackgroundColor: IappColor.cloudwhite,
-    textTheme: ItextTheme.lightTextTheme,
-    appBarTheme: IappBarTheme.lightAppBar,
+    primaryColor: IAppColor.pulpRed,
+    scaffoldBackgroundColor: IAppColor.cloudWhite,
+    textTheme: ITextTheme.lightTextTheme,
+    appBarTheme: IAppBarTheme.lightAppBar,
   );
 }

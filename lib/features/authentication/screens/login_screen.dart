@@ -10,27 +10,22 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var scrnsize = MediaQuery.sizeOf(context);
+    var screenSize = MediaQuery.sizeOf(context);
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             ShaderMask(
               shaderCallback: (Rect bounds) {
-                return LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.center,
-                  colors: [IappColor.cloudwhite, IappColor.cloudwhite.withOpacity(0.03)],
-                ).createShader(bounds);
+                return IAppColor.linearGradient.createShader(bounds);
               },
-              blendMode:BlendMode.srcATop ,
-              child: SizedBox(
-                height: scrnsize.height * 0.65,
-                width: scrnsize.width,
-                child: Image.asset(
-                  IappImgString.onBoardingImg,
-                  fit: BoxFit.fitWidth,filterQuality: FilterQuality.high,
-                ),
+              blendMode: BlendMode.srcATop,
+              child: Image.asset(
+                height: screenSize.height * 0.65,
+                width: screenSize.width,alignment: Alignment.center,
+                IappImgString.onBoardingImg,
+                  fit: BoxFit.fill,scale: 0.5,
+                filterQuality: FilterQuality.high,
               ),
             ),
             IappSizes.spacelg,
@@ -43,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .headlineMedium
-                        ?.copyWith(color: IappColor.pulpred),
+                        ?.copyWith(color: IAppColor.pulpRed),
                   ),
                   TextSpan(
                     text: IappText.onBoardingTitle2,
@@ -60,18 +55,19 @@ class LoginScreen extends StatelessWidget {
               IappText.onBoardingSub,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                    color: IappColor.cementgrey,
-                    fontWeight: FontWeight.w400,height: 1.6,
+                    color: IAppColor.cementGrey,
+                    fontWeight: FontWeight.w400,
+                    height: 1.6,
                   ),
             ),
             IappSizes.spacemd,
             GestureDetector(
               onTap: () {},
               child: Container(
-                height: scrnsize.height * 0.065,
-                width: scrnsize.width * 0.9,
+                height: screenSize.height * 0.065,
+                width: screenSize.width * 0.9,
                 decoration: BoxDecoration(
-                  color: IappColor.pulpred,
+                  color: IAppColor.pulpRed,
                   borderRadius: BorderRadius.circular(IappSizes.btncorner3),
                 ),
                 alignment: Alignment.center,
@@ -81,20 +77,19 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     SvgPicture.asset(
                       IappImgString.google,
-                      height: IappSizes.icnxl,
-                      width: IappSizes.icnxl,
+                      height: IappSizes.icn2xl,
+                      width: IappSizes.icn2xl,
                       colorFilter: const ColorFilter.mode(
-                        IappColor.cloudwhite,
+                        IAppColor.cloudWhite,
                         BlendMode.srcIn,
                       ),
                     ),
                     IappSizes.spacesm,
                     Text(
                       IappText.onBoardingBtn,
-                      style: Theme.of(context)
-                          .textTheme
-                          .labelLarge
-                          ?.copyWith(color: IappColor.cloudwhite),
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                          color: IAppColor.cloudWhite,
+                          fontWeight: FontWeight.w500),
                     )
                   ],
                 ),
