@@ -70,6 +70,15 @@ class HomeScreen extends StatelessWidget {
                       color: IAppColor.softBlack.withOpacity(0.6),
                     ),
               ),
+              Positioned(
+                top: 6,
+                left: 3,
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: IAppColor.radialGradient,
+                  ),
+                ),
+              ),
             ],
           ),
         ],
