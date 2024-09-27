@@ -56,7 +56,6 @@ class LoginScreen extends StatelessWidget {
               IAppText.onBoardingSub,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                    color: IAppColor.cementGrey,
                     fontWeight: FontWeight.w400,
                     height: 1.6,
                   ),

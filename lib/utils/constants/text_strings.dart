@@ -7,6 +7,8 @@ class IAppText {
       'Get timely alerts for your favorite products with\nour mobile app and without loosing your money!  ';
   static const String onBoardingBtn = 'Continue with Google';
 
+  static const String welcome = 'Welcome';
+  static const String userName = 'Mohamed Ibrahim';
   static const String heroTitle = 'Secure your money\nwith precision';
   static const String heroSub =
       'Join our millions of people who choose Info Harvest\nto save money in every products';

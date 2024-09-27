@@ -31,7 +31,7 @@ class ITextTheme {
 
 // labels
     labelLarge: const TextStyle().copyWith(
-        fontSize: 12, fontWeight: FontWeight.w600, color: IAppColor.softBlack),
+        fontSize: 12, fontWeight: FontWeight.w600, color: IAppColor.cementGrey),
     labelMedium: const TextStyle().copyWith(
         fontSize: 10, fontWeight: FontWeight.w500, color: IAppColor.softBlack),
     labelSmall: const TextStyle().copyWith(
