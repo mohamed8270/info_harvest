@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:info_harvest/features/authentication/screens/signup_page.dart';
 import 'package:info_harvest/features/product/screens/home_screen.dart';
 import 'package:info_harvest/utils/constants/colors.dart';
@@ -14,7 +13,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.sizeOf(context);
+    var size = IDeviceUtils.getDeviceSize();
     IDeviceUtils.setStatusBarColor(IAppColor.cloudWhite, Brightness.dark);
     return Scaffold(
       body: SafeArea(
@@ -26,8 +25,8 @@ class LoginScreen extends StatelessWidget {
               },
               blendMode: BlendMode.srcATop,
               child: Image.asset(
-                height: screenSize.height * 0.65,
-                width: screenSize.width,
+                height: size.height * 0.62,
+                width: size.width,
                 alignment: Alignment.center,
                 IAppImgString.onBoardingImg,
                 fit: BoxFit.contain,
@@ -69,8 +68,8 @@ class LoginScreen extends StatelessWidget {
             GestureDetector(
               onTap: () => Get.to(const HomeScreen()),
               child: Container(
-                height: screenSize.height * 0.065,
-                width: screenSize.width * 0.9,
+                height: size.height * 0.065,
+                width: size.width * 0.9,
                 decoration: BoxDecoration(
                   color: IAppColor.pulpRed,
                   borderRadius: BorderRadius.circular(IAppSizes.btnCorner3),
