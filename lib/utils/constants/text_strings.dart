@@ -11,6 +11,13 @@ class IAppText {
 
   static const String signUpTitle = 'Create Account';
   static const String signupSub = 'Fill your information below or register\nwith your social account';
+  static const String shortNameError = 'Name is too short';
+  static const String alphabetError = 'Name should only contains alphabets';
+  static const String fillFields = 'Please provide data in this field';
+  static const String emailError = 'Invalid email address';
+  static const String phoneError = 'Enter a valid phone number';
+  static const String passError = 'Password must contains uppercase, lowercase, number and symbols';
+  static const String passLenError = 'Password must be at least 8 characters';
 
   static const String welcome = 'Welcome';
   static const String userName = 'Mohamed Ibrahim';

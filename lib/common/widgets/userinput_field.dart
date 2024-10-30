@@ -4,7 +4,14 @@ import 'package:info_harvest/utils/constants/sizes.dart';
 import 'package:info_harvest/utils/device/device_utility.dart';
 
 class UserInputField extends StatelessWidget {
-  const UserInputField({super.key});
+  const UserInputField({super.key, required this.label, required this.hint, required this.validator, this.obscureTxt=false, required this.controller, required this.type});
+
+  final String label;
+  final String hint;
+  final TextInputType type;
+  final TextEditingController controller;
+  final String? Function(String?) validator;
+  final bool obscureTxt;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +20,7 @@ class UserInputField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('First name', style: Theme.of(context).textTheme.labelLarge?.copyWith(color: IAppColor.softBlack),),
+        Text(label, style: Theme.of(context).textTheme.labelLarge?.copyWith(color: IAppColor.softBlack),),
         IAppSizes.spaceSm,
         Container(
           height:  size.height*0.055,
@@ -23,16 +30,17 @@ class UserInputField extends StatelessWidget {
           child: TextFormField(
             cursorColor: IAppColor.softBlack,
             style: Theme.of(context).textTheme.labelMedium,
-
-          onSaved: (String? value) {},
-            validator: (String? valur) {},
+            validator: validator,
+            controller: controller,
+            obscureText: obscureTxt,
+            keyboardType: type,
             decoration: InputDecoration(
-              hintText: 'Ex: Jhon',
+              hintText: hint,
               hintStyle: Theme.of(context).textTheme.labelMedium?.copyWith(color: IAppColor.cementGrey.withOpacity(0.5)),
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,
               isCollapsed: true,
-              contentPadding: EdgeInsets.symmetric(horizontal: IAppSizes.sm),
+              contentPadding:const EdgeInsets.symmetric(horizontal: IAppSizes.sm),
             ),
           ),
         ),
