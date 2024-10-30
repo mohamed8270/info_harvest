@@ -4,10 +4,11 @@ import 'package:info_harvest/utils/constants/sizes.dart';
 import 'package:info_harvest/utils/device/device_utility.dart';
 
 class UserInputField extends StatelessWidget {
-  const UserInputField({super.key, required this.label, required this.hint, required this.validator, this.obscureTxt=false, required this.controller, required this.type});
+  const UserInputField({super.key, required this.label, required this.hint, required this.validator, this.obscureTxt=false, required this.controller, required this.type, required this.w});
 
   final String label;
   final String hint;
+  final double w;
   final TextInputType type;
   final TextEditingController controller;
   final String? Function(String?) validator;
@@ -24,7 +25,7 @@ class UserInputField extends StatelessWidget {
         IAppSizes.spaceSm,
         Container(
           height:  size.height*0.055,
-          width: size.width *0.43,
+          width: w,
           decoration: BoxDecoration(color: IAppColor.greyWhite,borderRadius: BorderRadius.circular(5)),
           alignment: Alignment.center,
           child: TextFormField(
@@ -36,7 +37,7 @@ class UserInputField extends StatelessWidget {
             keyboardType: type,
             decoration: InputDecoration(
               hintText: hint,
-              hintStyle: Theme.of(context).textTheme.labelMedium?.copyWith(color: IAppColor.cementGrey.withOpacity(0.5)),
+              hintStyle: Theme.of(context).textTheme.labelMedium?.copyWith(color: IAppColor.cementGrey.withOpacity(0.7)),
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,
               isCollapsed: true,

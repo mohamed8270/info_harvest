@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:info_harvest/utils/constants/text_strings.dart';
 
 class AuthValidation {
@@ -47,6 +49,16 @@ class AuthValidation {
       return IAppText.passLenError;
     } else if (!password.hasMatch(value)) {
       return IAppText.passError;
+    }
+    return null;
+  }
+
+  // check box
+  String? validateCheckBox(bool? value) {
+    if(value == null) {
+      return IAppText.checkBoxError;
+    } else if(!value) {
+      return IAppText.checkBoxError;
     }
     return null;
   }

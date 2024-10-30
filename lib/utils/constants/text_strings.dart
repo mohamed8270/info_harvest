@@ -18,6 +18,9 @@ class IAppText {
   static const String phoneError = 'Enter a valid phone number';
   static const String passError = 'Password must contains uppercase, lowercase, number and symbols';
   static const String passLenError = 'Password must be at least 8 characters';
+  static const String checkBoxError = 'Please accept terms & conditions';
+  static const String termsLabel1 = 'Agree with ';
+  static const String termsLabel2 = 'terms & conditions';
 
   static const String welcome = 'Welcome';
   static const String userName = 'Mohamed Ibrahim';
