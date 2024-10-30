@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-class TDeviceUtils {
+class IDeviceUtils {
   static void hideKeyboard(BuildContext context) {
     FocusScope.of(context).requestFocus(FocusNode());
   }
 
-  static Future<void> setStatusBarColor(Color color) async {
+  static Future<void> setStatusBarColor(Color bgColor, Brightness icnColor) async {
     SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: color),
+      SystemUiOverlayStyle(statusBarColor: bgColor,statusBarIconBrightness: icnColor),
     );
   }
 
@@ -39,5 +39,9 @@ class TDeviceUtils {
   static void vibrate(Duration duration) {
     HapticFeedback.vibrate();
     Future.delayed(duration, () => HapticFeedback.vibrate);
+  }
+
+  static Size getDeviceSize() {
+    return MediaQuery.sizeOf(Get.context!);
   }
 }

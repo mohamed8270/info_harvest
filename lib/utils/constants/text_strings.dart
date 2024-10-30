@@ -5,7 +5,12 @@ class IAppText {
   static const String onBoardingTitle2 = ' Notification\nfor Everything';
   static const String onBoardingSub =
       'Get timely alerts for your favorite products with\nour mobile app and without loosing your money!  ';
-  static const String onBoardingBtn = 'Continue with Google';
+  static const String onBoardingBtn = 'Get Started';
+  static const String onBoardingLogin1 = 'Already have an account?';
+  static const String onBoardingLogin2 = 'SignIn';
+
+  static const String signUpTitle = 'Create Account';
+  static const String signupSub = 'Fill your information below or register\nwith your social account';
 
   static const String welcome = 'Welcome';
   static const String userName = 'Mohamed Ibrahim';

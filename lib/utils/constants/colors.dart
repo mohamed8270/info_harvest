@@ -14,11 +14,12 @@ class IAppColor {
   static Gradient linearGradient = LinearGradient(
     begin: Alignment.bottomCenter,
     end: Alignment.center,
-    colors: [IAppColor.cloudWhite, IAppColor.cloudWhite.withOpacity(0.0)],
+    colors: [IAppColor.cloudWhite, IAppColor.cloudWhite.withOpacity(0.1)],
   );
 
   static Gradient radialGradient = RadialGradient(
-    radius: 0.6,
-    colors: [IAppColor.pulpRed, IAppColor.pulpRed.withOpacity(0.1)],
+    radius: 0.8,
+    center: Alignment(0.0, 0.0),
+    colors: [IAppColor.pulpRed.withOpacity(0.5), IAppColor.cloudWhite],
   );
 }

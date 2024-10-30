@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:info_harvest/features/authentication/screens/signup_page.dart';
+import 'package:info_harvest/features/product/screens/home_screen.dart';
 import 'package:info_harvest/utils/constants/colors.dart';
 import 'package:info_harvest/utils/constants/images_string.dart';
 import 'package:info_harvest/utils/constants/sizes.dart';
 import 'package:info_harvest/utils/constants/text_strings.dart';
+import 'package:get/get.dart';
+import 'package:info_harvest/utils/device/device_utility.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -11,6 +15,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.sizeOf(context);
+    IDeviceUtils.setStatusBarColor(IAppColor.cloudWhite, Brightness.dark);
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -25,11 +30,11 @@ class LoginScreen extends StatelessWidget {
                 width: screenSize.width,
                 alignment: Alignment.center,
                 IAppImgString.onBoardingImg,
-                fit: BoxFit.fitWidth,
+                fit: BoxFit.contain,
                 filterQuality: FilterQuality.high,
               ),
             ),
-            IAppSizes.spaceLg,
+            IAppSizes.spaceXs,
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
@@ -62,7 +67,7 @@ class LoginScreen extends StatelessWidget {
             ),
             IAppSizes.spaceMd,
             GestureDetector(
-              onTap: () {},
+              onTap: () => Get.to(const HomeScreen()),
               child: Container(
                 height: screenSize.height * 0.065,
                 width: screenSize.width * 0.9,
@@ -71,30 +76,24 @@ class LoginScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(IAppSizes.btnCorner3),
                 ),
                 alignment: Alignment.center,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      IAppImgString.google,
-                      height: IAppSizes.icn2xl,
-                      width: IAppSizes.icn2xl,
-                      colorFilter: const ColorFilter.mode(
-                        IAppColor.cloudWhite,
-                        BlendMode.srcIn,
-                      ),
-                    ),
-                    IAppSizes.spaceSm,
-                    Text(
-                      IAppText.onBoardingBtn,
-                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                          color: IAppColor.cloudWhite,
-                          fontWeight: FontWeight.w500),
-                    )
-                  ],
+                child: Text(
+                  IAppText.onBoardingBtn,
+                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                      color: IAppColor.cloudWhite,
+                      fontWeight: FontWeight.w500),
                 ),
               ),
             ),
+            IAppSizes.spaceXl,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              Text(IAppText.onBoardingLogin1,style: Theme.of(context).textTheme.labelMedium?.copyWith(color: IAppColor.softBlack, fontWeight: FontWeight.w500),),
+              IAppSizes.spaceXs,
+              GestureDetector(
+                onTap: () => Get.to(const SignupPage()),
+                  child: Text(IAppText.onBoardingLogin2,style: Theme.of(context).textTheme.labelMedium?.copyWith(color: IAppColor.pulpRed, fontWeight: FontWeight.w500),)),
+            ],),
           ],
         ),
       ),
