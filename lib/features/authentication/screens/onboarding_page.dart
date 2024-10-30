@@ -25,15 +25,14 @@ class LoginScreen extends StatelessWidget {
               },
               blendMode: BlendMode.srcATop,
               child: Image.asset(
-                height: size.height * 0.62,
+                height: size.height * 0.6,
                 width: size.width,
                 alignment: Alignment.center,
                 IAppImgString.onBoardingImg,
-                fit: BoxFit.contain,
+                fit: BoxFit.cover,
                 filterQuality: FilterQuality.high,
               ),
             ),
-            IAppSizes.spaceXs,
             RichText(
               textAlign: TextAlign.center,
               text: TextSpan(
@@ -87,11 +86,11 @@ class LoginScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              Text(IAppText.onBoardingLogin1,style: Theme.of(context).textTheme.labelMedium?.copyWith(color: IAppColor.softBlack, fontWeight: FontWeight.w500),),
+              Text(IAppText.haveAnAcc,style: Theme.of(context).textTheme.labelMedium?.copyWith(color: IAppColor.softBlack, fontWeight: FontWeight.w500),),
               IAppSizes.spaceXs,
               GestureDetector(
                 onTap: () => Get.to(const SignupPage()),
-                  child: Text(IAppText.onBoardingLogin2,style: Theme.of(context).textTheme.labelMedium?.copyWith(color: IAppColor.pulpRed, fontWeight: FontWeight.w500),)),
+                  child: Text(IAppText.signIn,style: Theme.of(context).textTheme.labelMedium?.copyWith(color: IAppColor.pulpRed, fontWeight: FontWeight.w500),)),
             ],),
           ],
         ),

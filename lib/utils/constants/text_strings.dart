@@ -6,17 +6,18 @@ class IAppText {
   static const String onBoardingSub =
       'Get timely alerts for your favorite products with\nour mobile app and without loosing your money!  ';
   static const String onBoardingBtn = 'Get Started';
-  static const String onBoardingLogin1 = 'Already have an account?';
-  static const String onBoardingLogin2 = 'SignIn';
+  static const String haveAnAcc = 'Already have an account?';
+  static const String signIn = 'Sign In';
+  static const String signUp = 'Sign Up';
 
   static const String signUpTitle = 'Create Account';
   static const String signupSub = 'Fill your information below or register\nwith your social account';
   static const String shortNameError = 'Name is too short';
-  static const String alphabetError = 'Name should only contains alphabets';
+  static const String alphabetError = 'Alphabets only allowed';
   static const String fillFields = 'Please provide data in this field';
   static const String emailError = 'Invalid email address';
   static const String phoneError = 'Enter a valid phone number';
-  static const String passError = 'Password must contains uppercase, lowercase, number and symbols';
+  static const String passError = 'Password must contain uppercase, lowercase, number and symbols';
   static const String passLenError = 'Password must be at least 8 characters';
   static const String checkBoxError = 'Please accept terms & conditions';
   static const String termsLabel1 = 'Agree with ';

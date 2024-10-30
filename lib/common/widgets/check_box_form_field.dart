@@ -31,16 +31,16 @@ class CheckBoxFormField extends FormField<bool> {
                 Checkbox(
                     value: isChecked,
                     onChanged: isChanged,
+                    checkColor: IAppColor.cloudWhite,
+                    activeColor: IAppColor.pulpRed,
                     isError: true),
-                IAppSizes.spaceMd,
                 Text(labelTxt1,
-                    style: Theme.of(context).textTheme.labelMedium),
-                IAppSizes.spaceSm,
-                Text(labelTxt1,
+                    style: Theme.of(context).textTheme.labelMedium?.copyWith(fontWeight: FontWeight.w500, color: IAppColor.softBlack)),
+                Text(labelTxt2,
                     style: Theme.of(context)
                         .textTheme
                         .labelMedium
-                        ?.copyWith(color: IAppColor.pulpRed)),
+                        ?.copyWith(color: IAppColor.pulpRed, fontWeight: FontWeight.w500)),
               ],
             ),
             Row(
@@ -51,7 +51,7 @@ class CheckBoxFormField extends FormField<bool> {
                     child: Text(error.isNotEmpty ? '* $error' : '',
                         style: Theme.of(context)
                             .textTheme
-                            .labelSmall
+                            .labelMedium
                             ?.copyWith(color: Colors.red)))
               ],
             )
